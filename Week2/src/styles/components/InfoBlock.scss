@@ -1,0 +1,26 @@
+@use '../index.scss' as *;
+
+.info-block h3 {
+  margin: 0 0 27px;
+  font-size: 32px;
+  line-height: normal;
+  font-weight: 700;
+}
+
+.info-block p {
+  margin: 0;
+  font-size: 20px;
+  line-height: 1.7;
+  font-weight: 700;
+  color: $text-muted;
+}
+
+@media (max-width: 1440px) {
+  .info-block h3 {
+    font-size: 28px;
+  }
+
+  .info-block p {
+    font-size: 17px;
+  }
+}
