@@ -1,0 +1,82 @@
+@use '../index.scss' as *;
+
+.site-header {
+  height: 120px;
+  background: $white;
+}
+
+.inner {
+  @include responsive-width;
+}
+
+.header-inner {
+  height: 100%;
+  @include flex-center;
+  justify-content: space-between;
+}
+
+.logo {
+  font-size: 44px;
+  line-height: 1;
+  font-weight: 800;
+  color: $blue;
+}
+
+.main-nav {
+  @include flex-center;
+  gap: 32px;
+
+  a {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: 12px 24px;
+    font-size: 28px;
+    font-weight: 500;
+    line-height: normal;
+    cursor: pointer;
+    transition: color 0.3s ease;
+
+    &:hover {
+      color: $blue;
+    }
+  }
+}
+
+@media (max-width: 1440px) {
+  .logo {
+    font-size: 32px;
+  }
+
+  .main-nav a {
+    font-size: 20px;
+    padding: 8px 14px;
+  }
+}
+
+@media (max-width: 1024px) {
+  .site-header {
+    height: auto;
+    padding: 22px 0;
+  }
+
+  .header-inner {
+    flex-direction: column;
+    gap: 16px;
+  }
+}
+
+@media (max-width: 640px) {
+  .logo {
+    font-size: 30px;
+  }
+
+  .main-nav {
+    gap: 8px;
+
+    a {
+      font-size: 14px;
+      padding: 8px;
+    }
+  }
+}
